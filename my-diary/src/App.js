@@ -3,6 +3,8 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import main from './css/main.css';
+import {useState} from 'react';
+
 
 function App() {
 
@@ -15,16 +17,37 @@ function App() {
     age: 20,
   }
 
+ 
   const arr = [1,2,3,4,5];
+
+  const [num, setNum] = useState(12);
+  const [username, setUsername] = useState('sample');
 
 
   return (
     <>
-    <main>
+    <main> 
       <Header/>
-      <h1 style={main}> 
-        {firstName} {lastName} {age} {students.firstName}
+      main
+      <h1 > 
+         This is the num : {num}
+         <button onClick={()=>setNum(num +1)}>
+          Add
+         </button>
       </h1> 
+      <br/>
+      <h1 > 
+        {username}
+      </h1> 
+      <button onClick={()=>setUsername("mema")}>
+      change username
+      </button>
+
+      <input value = {username} onChange = {(e)=>setUsername(e.target.value)}/>
+    
+
+
+
 
       {/* map all the array */}
       {arr.map(num => <p> {num * 5 }</p>)} 

@@ -1,9 +1,21 @@
 import React from 'react'
 
+
 const Footer = () => {
+
+
+  const myFooter = {
+    color: 'white',
+    backgroundColor: 'black',
+    padding: '10px'
+  }
+
+
   return (
     <footer>
-        This is footer 
+       <p style={myFooter}>
+          This is footer
+       </p>  
     </footer>
   )
 }
