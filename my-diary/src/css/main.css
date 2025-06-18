@@ -1,5 +1,11 @@
-h1 { 
-    margin: 20px;
-    padding: 100px; 
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+  padding: 20px;
 }
-
+.main-container h1 {
+  background-color: yellow;
+  padding: 20px;
+  border-radius: 10px;
+}
